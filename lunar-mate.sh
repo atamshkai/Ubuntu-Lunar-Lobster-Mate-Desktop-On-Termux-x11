@@ -9,5 +9,6 @@ EOF
 echo "proot-distro login --user mate lunar-mate --shared-tmp --bind /dev/null:/proc/sys/kernal/cap_last_cap" >>~/../usr/bin/lunar-mate
 chmod +x ~/../usr/bin/lunar-mate
 proot-distro install lunar-mate
+# add two lines for sudo 
 echo "Set disable_coredump false" >>~/../usr/var/lib/proot-distro/installed-rootfs/lunar-mate/etc/sudo.conf
 echo "chown root /usr/bin/sudo; chmod 4755 /usr/bin/sudo" >>~/../usr/var/lib/proot-distro/installed-rootfs/lunar-mate/etc/profile
